@@ -35,11 +35,11 @@ Line3D(X2,Y1,Z2,X2,Y2,Z2);
 Line3D(X1,Y2,Z2,X2,Y2,Z2);
 ctx.stroke();
 }
-function Cilinder3D(X1,Y1,X2,Y2,R1,R2,H1,H2){
+function Cilinder3D(X1,Y1,X2,Y2,H1,H2,R1,R2){
 for (var i = 0; i < 6.2831; i+=0.1) {
   Line3D(Math.cos(i)*R1+X1,Math.sin(i)*R1+Y1,H1,Math.cos(i)*R2+X2,Math.sin(i)*R2+Y2,H2);
-  Line3D(Math.cos(i)*R1+X1,Math.sin(i)*R1+Y1,H1,Math.cos(i+0.1)*R1+X1,Math.sin(i+0.1)*R1+Y2,H1);
-  Line3D(Math.cos(i)*R2+X2,Math.sin(i)*R2+Y1,H2,Math.cos(i+0.1)*R2+X2,Math.sin(i+0.1)*R2+Y2,H2);
+  Line3D(Math.cos(i)*R1+X1,Math.sin(i)*R1+Y1,H1,Math.cos(i+0.1)*R1+X1,Math.sin(i+0.1)*R1+Y1,H1);
+  Line3D(Math.cos(i)*R2+X2,Math.sin(i)*R2+Y2,H2,Math.cos(i+0.1)*R2+X2,Math.sin(i+0.1)*R2+Y2,H2);
   }
 ctx.stroke();
 }
